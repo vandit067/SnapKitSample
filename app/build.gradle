@@ -17,8 +17,16 @@ android {
     }
 
     buildTypes {
-        release {
+        debug {
             minifyEnabled false
+            buildConfigField "String", 'BASE_URL', '"https://graph.snapchat.com/"'
+            buildConfigField "String", 'API_TOKEN', '"eyJhbGciOiJIUzI1NiIsImtpZCI6IkNhbnZhc1MyU0hNQUNQcm9kIiwidHlwIjoiSldUIn0.eyJhdWQiOiJjYW52YXMtY2FudmFzYXBpIiwiaXNzIjoiY2FudmFzLXMyc3Rva2VuIiwibmJmIjoxNjQzNTY1NjMyLCJzdWIiOiIwNDg4NTIxMC01YjM3LTQyMjItODAxNi05ZGZlODhkZWMyYjR-U1RBR0lOR34yNzU4ZjBhZC02OWU0LTQ3MmQtYWM4MC02MDQ4MjEyNDM5MTgifQ.15tfnayCgHUjKYUJNJZ5dzwp_xnct1RX_kWw3Cdv5nk"'
+        }
+        release {
+            shrinkResources true
+            minifyEnabled true
+            buildConfigField "String", 'BASE_URL', '"https://graph.snapchat.com/"'
+            buildConfigField "String", 'API_TOKEN', '"eyJhbGciOiJIUzI1NiIsImtpZCI6IkNhbnZhc1MyU0hNQUNQcm9kIiwidHlwIjoiSldUIn0.eyJhdWQiOiJjYW52YXMtY2FudmFzYXBpIiwiaXNzIjoiY2FudmFzLXMyc3Rva2VuIiwibmJmIjoxNjQzNTY1NjMyLCJzdWIiOiIwNDg4NTIxMC01YjM3LTQyMjItODAxNi05ZGZlODhkZWMyYjR-UFJPRFVDVElPTn42MjM0MTFiMS0yNGRmLTQ0ZmQtODBjMC1lNGRlMWYxZTE2Y2MifQ.81EHQp9QrNQ93SweY5BcXt5KJQu-_N2KjDFKd4hSWRw"'
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
