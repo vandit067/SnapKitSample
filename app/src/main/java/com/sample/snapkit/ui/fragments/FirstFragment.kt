@@ -1,4 +1,4 @@
-package com.sample.snapkit
+package com.sample.snapkit.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.sample.snapkit.R
 import com.sample.snapkit.databinding.FragmentFirstBinding
 
 /**
